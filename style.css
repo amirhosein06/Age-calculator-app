@@ -1,2 +1,74 @@
-.attribution { font-size: 11px; text-align: center; }
+@font-face {
+    font-family: Poppinsbold;
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppinsbold;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 94%);
+}
+
+/* container styling */
+.container{
+    width: 550px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    border-bottom-right-radius: 100px;
+    padding: 45px;
+    border: 1px solid #000;
+}
+@media screen and
+(max-width: 767px) {
+    .container{
+        width: 330px;
+    }
+}
+/* container inputs styling */
+.container .inputs{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.container .inputs span{
+    display: flex;
+    flex-direction: column;
+}
+.container .inputs input{
+    width: 100px;
+    padding: 10px;
+    padding-left: 15px;
+    border: 1px solid hsl(0, 0%, 86%);
+    outline: none;
+    margin: 3px 10px 0 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.container .inputs label{
+    margin: 0 0px 0 10px;
+    font-size: 13px;
+    color: hsl(0, 1%, 44%);
+    font-weight: 700;
+}
+.container .inputs input::placeholder{
+    color: hsl(0, 1%, 44%);
+}
+.container .inputs input:focus{
+    border: 1px solid hsla(0, 0%, 8%, 0.514);
+}
+
+
+.attribution {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 20px;
+ }
 .attribution a { color: hsl(228, 45%, 44%); }
