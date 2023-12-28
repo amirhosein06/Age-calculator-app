@@ -1,6 +1,14 @@
 @font-face {
+    font-family: popins;
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
     font-family: Poppinsbold;
     src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: popinsextrabold;
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
 }
 *{
     padding: 0;
@@ -19,19 +27,14 @@ body{
 
 /* container styling */
 .container{
-    width: 550px;
+    width: 610px;
     background-color: hsl(0, 0%, 100%);
     border-radius: 15px;
-    border-bottom-right-radius: 100px;
+    border-bottom-right-radius: 160px;
     padding: 45px;
-    border: 1px solid #000;
+    padding-bottom: 30px;
 }
-@media screen and
-(max-width: 767px) {
-    .container{
-        width: 330px;
-    }
-}
+
 /* container inputs styling */
 .container .inputs{
     display: flex;
@@ -51,6 +54,7 @@ body{
     margin: 3px 10px 0 10px;
     font-size: 20px;
     border-radius: 5px;
+    cursor: pointer;
 }
 .container .inputs label{
     margin: 0 0px 0 10px;
@@ -65,10 +69,78 @@ body{
     border: 1px solid hsla(0, 0%, 8%, 0.514);
 }
 
+/* button styling */
+.container .btn-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 5px;
+    position: relative;
+}
+.container #changbtn{
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    background-color: hsl(259, 100%, 65%);
+    float: right;
+    border: none;
+    cursor: pointer;
+    display: block;
+}
+.container #changbtn:hover{
+    background-color: hsl(0, 0%, 8%);
+}
+.container #changbtn::before{
+    content: '';
+    position: absolute;
+    width: 85%;
+    height: 1%;
+    left: 0;
+    top: 50%;
+    background-color: hsl(0, 0%, 86%);
+}
+
+/* prview style */
+.prview div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.prview h1:nth-child(2),
+.prview h1:nth-child(4),
+.prview h1:nth-child(6){
+    font-size: 60px;
+    font-family: popinsextrabold;
+    font-weight: 700;
+    color: hsl(0, 0%, 8%);
+}
+.prview h1:nth-child(1),
+.prview h1:nth-child(3),
+.prview h1:nth-child(5){
+    color: hsl(259, 100%, 65%);
+    font-size: 65px;
+    font-family: popinsextrabold;
+    font-weight: 700;
+    margin: 0 7px 0 5px;
+}
 
 .attribution {
-    font-size: 13px;
+    font-size: 10px;
+    font-weight: 100;
     text-align: center;
     margin-top: 20px;
+    font-family: popins;
  }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and
+(max-width: 650px) {
+    .container{
+        width: 80%;
+    }
+    .container .inputs input{
+        width: 60px;
+    }
+}
