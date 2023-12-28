@@ -19,15 +19,21 @@
     <div class="inputs">
       <span>
       <label for="dayinput">DAY</label>
-      <input type="text" id="dayinput" placeholder="DD">
+      <input type="number" id="dayinput" placeholder="DD" data-paragraf="dayinputp" maxlength="2"
+      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+      <p id="dayinputp"></p>
       </span>
       <span>
       <label for="monthinput">MONTH</label>
-      <input type="text" id="monthinput" placeholder="MM">
+      <input type="number" id="monthinput" placeholder="MM" data-paragraf="monthinputp" maxlength="2"
+      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+      <p id="monthinputp"></p>
       </span>
       <span>
       <label for="yearinput">YEAR</label>
-      <input type="text" id="yearinput" placeholder="YYYY">
+      <input type="number" id="yearinput" placeholder="YYYY" data-paragraf="yearinputp" maxlength="4"
+      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+      <p id="yearinputp"></p>
       </span>
     </div>
 
@@ -41,9 +47,9 @@
   </div>
   
   <div class="prview">
-    <div class="yearsbox"><h1>- -</h1><h1>years</h1></div>
-    <div class="monthsbox"><h1>- -</h1><h1>months</h1></div> 
-    <div class="daysbox"><h1>- -</h1><h1>days</h1></div>  
+    <div class="yearsbox"><h1 id="yearsboxtext">- -</h1><h1>years</h1></div>
+    <div class="monthsbox"><h1 id="monthsboxtext">- -</h1><h1>months</h1></div> 
+    <div class="daysbox"><h1 id="daysboxtext">- -</h1><h1>days</h1></div>  
   </div>
 
 </div>
@@ -51,5 +57,7 @@
   Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
   Coded by <a href="https://github.com/amirhosein06">Amirhosein.z</a>
 </div>
+
 </body>
+<script src="script.js"></script>
 </html>
